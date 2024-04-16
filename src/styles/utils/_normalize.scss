@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Lexend';
+  src: url(../../../assets/fonts/Lexend-VariableFont_wght.ttf) format(truetype);
+}
+
+* {
+  box-sizing: border-box;
+
+  font-family: "Lexend", sans-serif;
+  font-size: 18px;
+  color: white;
+  line-height: 2rem;
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: $darkColor;
+  height: 100%;
+}

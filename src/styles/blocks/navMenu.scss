@@ -1,0 +1,71 @@
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 43px;
+  padding-bottom: 30px;
+
+  border-bottom: 1px solid white;
+  
+  position: relative;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    gap: 70px;
+
+    @include onDesktop {
+      gap: 20px;
+    }
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__burger {
+    height: 30px;
+    width: 40px;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    display: none;
+
+    cursor: pointer;
+
+    position: relative;
+
+    border-top: 4px solid $purpleColor;
+    border-bottom: 4px solid $purpleColor;
+
+    @include onTablet {
+      display: block;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+
+      top: 50%;
+      width: 100%;
+
+      transform: translateY(-50%);
+
+      height: 4px;
+
+      background: $purpleColor;
+    }
+  }
+}

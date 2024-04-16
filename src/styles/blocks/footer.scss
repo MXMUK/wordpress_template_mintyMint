@@ -1,0 +1,73 @@
+.footer {
+  border-top: 1px solid $lightColor;
+  padding: 50px 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    margin-right: 137px;
+
+    @include onTablet {
+      margin-right: 20px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    color: $purpleColor;
+
+    &__item {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+
+      font-weight: 300;
+    }
+  }
+
+  &__info {
+    padding: 0 0 0 89px;
+    border-left: 1px solid $lightColor;
+
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: space-between;
+
+    @include onTablet {
+      padding: 0 0 0 10px;
+    }
+
+    &__section {
+      display: flex;
+      flex-direction: column;
+      gap: 70px;
+    }
+  }
+
+  &__policy {
+   display: flex;
+   justify-content: end;
+   gap: 70px;
+   flex-wrap: wrap;
+
+   margin-top: 20px;
+
+   @include onTablet {
+    gap: 30px;
+  }
+
+   &__item {
+    color: $lightColor;
+    font-weight: 300;
+   }
+  }
+}

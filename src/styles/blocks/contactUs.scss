@@ -1,0 +1,51 @@
+.contactUs {
+  margin-top: 250px;
+  background: $darkPurpleColor;
+  position: relative;
+
+  &__block {
+    padding: 92px 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__description {
+      margin: 10px 0 51px;
+
+      font-weight: 300;
+      font-size: 20px;
+    }
+
+    &__whatWillYouGet {
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    &__content {
+      margin-top: 55px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 30px;
+      }
+    }
+  }
+
+  &__light {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    transform: translateY(50%);
+
+    @media (max-width: 1280px) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+$weProvideHeight: 613px;
+
+.weProvide {
+  height: $weProvideHeight;
+
+  @include onTablet {
+    height: $weProvideHeight * 2;
+  }
+
+  @include onPhone {
+    height: $weProvideHeight * 4;
+  }
+
+  background-image: url('../../../assets/images/main-bg.png');
+  background-size: cover;
+
+  position: relative;
+
+  display: flex;
+  align-items: stretch;
+
+  &__item {
+    border-left: 1px solid rgba(255, 255, 255, .5);
+
+    background-color: rgba(10, 12, 15, 0.5);
+
+    padding: 41px 34px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    overflow: hidden;
+
+    @include hover(background-color, rgba(10, 12, 15, 0.9));
+    @include onDesktop {
+      padding: 20px 10px;
+    }
+    @include onTablet {
+      padding: 41px 34px;
+    }
+
+    &__block {
+      transform: translateY(85%);
+      transition: transform .3s ease-out;
+    }
+
+    &:first-child {
+      border: none;
+    }
+
+    &__title {
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    &__content {
+      margin-top: 20px;
+
+      &__description {
+        padding: 50px 0 10px;
+        font-weight: 300;
+
+        transition: padding .3s ease-out;
+  
+        border-top: 2px solid $darkPurpleColor;
+        line-height: 20px;
+      }
+    }
+
+    &:hover &__block {
+      transform: translateY(0%);
+    }
+    &:hover &__content__description {
+      padding: 15px 0 10px;
+    }
+  }
+
+  &__light {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    transform: translateY(50%);
+
+    @media (max-width: 1280px) {
+      width: 100%;
+    }
+  }
+}

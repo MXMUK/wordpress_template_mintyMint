@@ -1,0 +1,54 @@
+.products {
+  margin-top: 165px;
+
+  &__cards {
+    margin-top: 114px;
+
+    &__item {
+      background: linear-gradient(to right, rgba(213, 220, 211, 0.25), rgba(50, 55, 49, 0.5));
+      padding: 55px 40px;
+
+      cursor: pointer;
+
+      @include hover(transform, translateY(10%));
+
+      &:hover {
+        background: $darkPurpleColor;
+      }
+
+      &:first-child {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+
+        @include onTablet {
+          border-radius: 0px;
+        }
+      }
+
+      &:last-child {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        @include onTablet {
+          border-radius: 0px;
+        }
+      }
+
+      &__title {
+        margin-top: 50px;
+
+        font-size: 25px;
+        font-weight: 700;
+      }
+
+      &__description {
+        margin-top: 25px;
+
+        font-size: 20px;
+        font-weight: 300;
+
+        line-height: 30px;
+      }
+    }
+  }
+}

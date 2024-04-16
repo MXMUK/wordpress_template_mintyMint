@@ -1,0 +1,11 @@
+.arrow {
+  width: 10px;
+  height: 10px;
+
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+
+  transition: transform .15s ease-out;
+
+  transform: rotate(-45deg);
+}

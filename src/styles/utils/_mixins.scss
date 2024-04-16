@@ -1,0 +1,33 @@
+@mixin hover($_property, $_toValue) {
+
+  transition: #{$_property} 0.3s ease-in-out;
+
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}
+
+@mixin onPhone {
+
+  @media (max-width: 743px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+
+  @media (max-width: 1536px) {
+    @content;
+  }
+}
+
+@mixin arrowRotate {
+  transform: rotate(135deg) translateY(-25%) translateX(50%);
+}

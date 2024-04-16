@@ -6,5 +6,5 @@ mix
   .options({
     processCssUrls: false,
   })
-  .js('src/js/app.js', 'dist')
-  .sass('src/styles/app.scss', 'dist');
+  .js('src/js/app.js', 'dist/src/js')
+  .sass('src/styles/app.scss', 'dist/src/css');

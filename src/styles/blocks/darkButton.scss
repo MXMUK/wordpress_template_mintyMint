@@ -1,0 +1,49 @@
+$darkButtonWidth: 220px;
+$darkButtonHeight: 63px;
+
+@mixin buttonSize($width, $height) {
+  width: $width;
+  height: $height;
+
+  background: white;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    -135deg,
+    rgba(255, 44, 247, 1) 0%,
+    rgba(251, 4, 123, 0.8) 16.67%,
+    rgba(255, 126, 188, 0.81) 33.33%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(73, 255, 233, 0.65) 66.67%,
+    rgba(19, 14, 255, 1) 100%
+  );
+
+  box-shadow: -35.24px 27.96px 87.09px 0 rgba(0, 56, 255, 0.3),
+    45.33px -24.15px 116.48px 0 rgba(248, 0, 59, 0.3);
+}
+
+.darkButton {
+  @include buttonSize($darkButtonWidth, $darkButtonHeight);
+  
+  &__content {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 23px;
+    background: black;
+    border-radius: 10px;
+    letter-spacing: 4%;
+  }
+
+  &-full {
+    @include buttonSize(100%, $darkButtonHeight);
+  }
+}
